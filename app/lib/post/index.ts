@@ -1,5 +1,7 @@
 import { Post } from "_types/post";
 
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
 const posts = [
   {
     id: "post-1",
@@ -28,9 +30,6 @@ const posts = [
 ];
 
 export async function getPosts(): Promise<Post[]> {
+  await sleep(1000);
   return posts;
-}
-
-export async function getPost(id: string): Promise<Post | null> {
-  return posts.find((post) => post.id === id) ?? null;
 }
