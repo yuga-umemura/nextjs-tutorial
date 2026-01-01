@@ -1,19 +1,23 @@
-export default function LoadingSkeleton() {
+type Props = {
+  count?: number;
+};
+
+export default function LoadingSkeleton({ count = 3 }: Props) {
   return (
-    <article className="animate-pulse space-y-4">
-      {/* title */}
-      <div className="h-8 w-3/4 rounded bg-gray-200" />
-
-      {/* meta */}
-      <div className="h-4 w-1/4 rounded bg-gray-200" />
-
-      {/* content lines */}
-      <div className="space-y-2">
-        <div className="h-4 w-full rounded bg-gray-200" />
-        <div className="h-4 w-full rounded bg-gray-200" />
-        <div className="h-4 w-5/6 rounded bg-gray-200" />
-        <div className="h-4 w-4/6 rounded bg-gray-200" />
-      </div>
-    </article>
+    <ul className="space-y-2">
+      {Array.from({ length: count }).map((_, i) => (
+        <li key={i}>
+          <div
+            className="
+              h-5
+              w-48
+              rounded
+              bg-gray-200
+              animate-pulse
+            "
+          />
+        </li>
+      ))}
+    </ul>
   );
 }
