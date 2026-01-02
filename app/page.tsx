@@ -1,7 +1,10 @@
-export default async function Page({
-  searchParams,
-}: {
-  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
-}) {
-  const filters = (await searchParams).filters;
+import Modal from "./ui/client/Modal";
+import Cart from "./ui/server/Cart";
+
+export default async function Page() {
+  return (
+    <Modal>
+      <Cart />
+    </Modal>
+  );
 }

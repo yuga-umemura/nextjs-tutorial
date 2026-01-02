@@ -9,5 +9,7 @@ export type Post = {
 
   content: string;
 
+  likes: number;
+
   createdAt: string;
 };

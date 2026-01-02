@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { getPosts } from "@/lib/post";
-import LoadingIndicator from "../loading-indicator";
+import LoadingIndicator from "../../client/loading-indicator";
 
 export default async function Post() {
   const posts = await getPosts();

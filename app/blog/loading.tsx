@@ -1,4 +1,4 @@
-import LoadingSkelton from "@/ui/Post/loading-skelton";
+import LoadingSkelton from "@/ui/server/Post/loading-skelton";
 
 export default function Loading() {
   return <LoadingSkelton />;
