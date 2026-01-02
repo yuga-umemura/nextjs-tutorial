@@ -10,6 +10,5 @@ export async function getPosts(): Promise<Post[]> {
 
 export async function getPost(id: string): Promise<Post | null> {
   await sleep(1000);
-
   return posts.find((post) => post.id === id) ?? null;
 }
