@@ -1,7 +1,7 @@
 import React from "react";
 import "./globals.css";
 import Link from "next/link";
-import ThemeProvider from "theme-provider";
+import ThemeProvider from "_context/theme/provider";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (

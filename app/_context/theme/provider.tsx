@@ -1,8 +1,7 @@
 "use client";
 
-import React, { createContext } from "react";
-
-export const ThemeContext = createContext({});
+import { ThemeContext } from "./context";
+import React from "react";
 
 export default function ThemeProvider({
   children,
